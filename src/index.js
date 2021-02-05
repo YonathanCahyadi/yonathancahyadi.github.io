@@ -7,7 +7,6 @@ import App from './App';
 
 import "./style.css";
 
-
 const theme = {
     main: "#CD09EB",
     secondary: "#540CF2",
