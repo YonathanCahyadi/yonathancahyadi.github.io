@@ -1,27 +1,28 @@
 import React from 'react';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Link, Element, Events as scroll, scrollSpy, scroller } from 'react-scroll';
+import styled from 'styled-components';
 
 import HomePage from './pages/Home';
 
-import styled from 'styled-components';
-import { element } from 'prop-types';
+import logo from './assets/yonathan-cahyadi-logo.svg';
 
 
 const StyledContentDiv = styled.div`
     border: 1px solid blue;
-    padding: 10px 0px;
 `;
 
 const StyledPageDiv = styled.div`
-    border: 1px solid red;
+    // border: 1px solid red;
     padding: 10px 15px;
-    margin: 0px 15px;
-    min-height: 80vh;
-    max-height: 80vh;
+    min-height: 90vh;
+    max-height: 90vh;
+    background-color: ${(props) => props.secondary ? "#39374D" : "#39374D"};
+    opacity: ${(props) => props.secondary ? "0.5" : "0.3"};
+    
 `;
 
 const StyledNav= styled.nav`
-    border: 1px solid green;
+     // border: 1px solid green;
     position: fixed; 
     min-height: 10vh;
     max-height: 10vh;
@@ -29,87 +30,116 @@ const StyledNav= styled.nav`
     max-width: 100vw;
     height: 10vh;
     width: 100vw;
+    background-color: #39374D;
+    z-index: 10;
 `;
 
 const StyledSpacer = styled.div`
-    border: 1px solid violet;
+    // border: 3px solid violet;
     min-height: 10vh;
     max-height: 10vh;
 `;
 
 const StyledUl = styled.ul`
-    border: 1px solid yellowgreen;
+    // border: 1px solid yellowgreen;
     list-style-type: none;
     width: inherit;
     height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
 `;
 
 const StyledLi = styled.li`
-    border: 1px solid black;
+    // border: 1px solid black;
     display: inline-block;
-    padding: 0px 10%;
+    padding: 5px 10%;
+
+    
+    font-family: 'Poppins', 'sans-serif';
+    color: #FFFFFF;
+    line-height: 28.5px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+
+   
+    
 `;
 
-const StyledNavSelection = styled.h3`
+const StyledNavSelection = styled(Link)`
 
-    border-bottom: ${(props) => props.active ? '2px solid teal' : 'none'};
+    &.active {
+        border-bottom: 2px solid teal;
+    }
     
     &:hover {
         border-bottom: 2px solid teal;
     }
 `;
 
+
+const StyledLogo = styled.img`
+    //border: 1px solid red;
+    padding: 0px 40px 0px 100px;
+`;
+
 class App extends React.Component {
 
+    state = {
+        activePage: 'home'
+    }
+
+    constructor(props){
+        super(props);
+        this.setActivePage = this.setActivePage.bind(this);
+    }
 
     componentDidMount(){
-        Events.scrollEvent.register('begin', (to, element) => {
-            console.log(`being -> ${to} -- ${arguments}`)
-        })
-
-        Events.scrollEvent.register('end', (to, element) => {
-            console.log(`end -> ${to} -- ${arguments}`)
-        })
-
         scrollSpy.update();
     }
 
     componentWillUnmount() {
-        Events.scrollEvent.remove('begin');
-        Events.scrollEvent.remove('end');
-        
+    
     }
 
-    setActive(){
-
+    setActivePage(page){
+        this.setState({
+            activePage: page
+        })
     }
+
 
     render(){
         return(
             <div>
                 <StyledNav>
                     <StyledUl>
+                        <StyledLogo src={logo} />
                         <StyledLi>
-                            <Link activeClass='active' to='home' offset={-122} spy={true} smooth={true}>
-                                <StyledNavSelection >Home</StyledNavSelection>
-                            </Link>
+                            <StyledNavSelection activeClass='active' to='home' offset={-150} spy={true} smooth={true}>
+                                Home
+                            </StyledNavSelection>
                         </StyledLi>
                         <StyledLi>
-                            <Link activeClass='active' to='about' offset={-122} spy={true} smooth={true}>
-                                <StyledNavSelection>About</StyledNavSelection>
-                            </Link>
+                            <StyledNavSelection activeClass='active' to='about' offset={-105} spy={true} smooth={true}>
+                                About
+                            </StyledNavSelection>
                         </StyledLi>
                         <StyledLi>
-                            <Link activeClass='active' to='contact' offset={-122} spy={true} smooth={true}>
-                                <StyledNavSelection>Contact</StyledNavSelection>
-                            </Link>
+                            <StyledNavSelection activeClass='active' to='projects' offset={-105} spy={true} smooth={true}>
+                                Projects
+                            </StyledNavSelection>
+                        </StyledLi>
+                        <StyledLi>
+                            <StyledNavSelection activeClass='active' to='contact' offset={-105} spy={true} smooth={true}>
+                                Contact
+                            </StyledNavSelection>
                         </StyledLi>
                     </StyledUl>
                 </StyledNav>
-
                 <StyledSpacer />
 
                 <StyledContentDiv>
@@ -117,11 +147,15 @@ class App extends React.Component {
                         <Element name='home'>Home</Element>
                         <HomePage />
                     </StyledPageDiv>
-                    <StyledPageDiv>
+                    <StyledPageDiv secondary>
                         <Element name='about'>About</Element>
                         <HomePage />
                     </StyledPageDiv>
                     <StyledPageDiv>
+                        <Element name='projects'>Projects</Element>
+                        <HomePage />
+                    </StyledPageDiv>
+                    <StyledPageDiv secondary>
                         <Element name='contact'>Contact</Element>
                         <HomePage />
                     </StyledPageDiv>
