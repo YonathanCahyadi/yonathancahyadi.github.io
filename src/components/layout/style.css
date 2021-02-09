@@ -2,12 +2,26 @@
   border: 1px solid purple;
   height: 100vh;
 
-  padding: 5vh 20vw;
+  padding: 10vh 20vw;
+
+  font-family: "Poppins", "sans-serif";
+}
+
+.primary-bg {
+  background-color: #39374d;
+  color: #ffffff;
+}
+
+.secondary-bg {
+  background-color: #39374d49;
+
+  color: #39374d;
 }
 
 /** Navigation Bar */
 .navigation-spacer {
   height: 8vh;
+  display: flex;
 }
 
 .navigation-menu {
@@ -26,10 +40,11 @@
   font-size: 16px;
   font-weight: 300;
 
-    z-index: 10; /** make it on the upper layer */
+  z-index: 10; /** make it on the upper layer */
 }
 
 .navigation-logo {
+    cursor: pointer;
 }
 
 .navigation-items {
@@ -57,6 +72,13 @@
   border-bottom: 2px solid #75aadc;
 }
 
+
+
+
+
+
+
+
 /** for mobile */
 @media screen and (max-width: 768px) {
   .navigation-menu {
@@ -71,5 +93,10 @@
   .navigation-item {
     margin: auto;
     margin-top: 15px;
+  }
+
+  /** Navigation Bar */
+.navigation-spacer {
+    flex-direction: column;
   }
 }

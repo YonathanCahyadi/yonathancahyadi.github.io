@@ -1,5 +1,5 @@
-import React, { useEffect, createRef, useCallback, useState } from "react";
-import { Link } from "react-scroll";
+import React, { useEffect, createRef, useCallback, useState, useRef } from "react";
+import { Link, animateScroll as Scroll } from "react-scroll";
 import { Fade } from "react-reveal";
 import "./style.css";
 
@@ -9,11 +9,12 @@ function Layout(props) {
 
 function ContentDiv(props) {
   return (
-    <Fade>
-      <div className="content" id={props.id ?? "content-default-id"}>
-        {props.children}
-      </div>
-    </Fade>
+    <div
+      className={"content " + (props.primary ? "primary-bg" : "secondary-bg")}
+      id={props.id ?? "content-default-id"}
+    >
+      {props.children}
+    </div>
   );
 }
 
@@ -22,9 +23,9 @@ function NavigationSpacer(props) {
 }
 
 function Navigation(props) {
-  const duration = 300;
+  const duration = 500;
   const [offset, setOffset] = useState(78.48);
-  const navRef = createRef();
+  const navRef = useRef(null);
 
   // update the offset for scroller spy
   useEffect(() => {
@@ -34,7 +35,7 @@ function Navigation(props) {
   return (
     <div className="navigation" ref={navRef}>
       <nav className="navigation-menu">
-        <img className="navigation-logo" src={props.logo} alt="logo" />
+        <img className="navigation-logo" src={props.logo} alt="logo" onClick={() => Scroll.scrollToTop()}/>
         <ul className="navigation-items">
           <li className="navigation-item">
             <Link
