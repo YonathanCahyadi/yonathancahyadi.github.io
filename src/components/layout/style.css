@@ -1,73 +1,75 @@
 .content {
-    border: 1px solid purple;
+  border: 1px solid purple;
+  height: 100vh;
+
+  padding: 5vh 20vw;
 }
 
-
-
+/** Navigation Bar */
 .navigation-spacer {
-    
+  height: 8vh;
 }
 
 .navigation-menu {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
+  height: 8vh;
+  width: 100vw;
 
-    background-color: #39374D;
-    color: #FFFFFF;
+  background-color: #39374d;
+  color: #ffffff;
 
-    font-family: 'Poppins', 'sans-serif';
-    font-size: 16px;
-    font-weight: 300;
-    
+  font-family: "Poppins", "sans-serif";
+  font-size: 16px;
+  font-weight: 300;
+
+    z-index: 10; /** make it on the upper layer */
 }
 
 .navigation-logo {
 }
 
 .navigation-items {
-    border: 1px solid blue;
-    display: flex;
+  display: flex;
 
-    justify-content: space-around;
-    width: 40%;
-    
-   
+  justify-content: space-around;
+  width: 40%;
 }
 
 .navigation-item {
-    border: 1px solid red;
-    list-style: none;
+  list-style: none;
 }
 
 .navigation-item-link {
-
-    text-decoration: none;
-    color: #FFFFFF;
+  text-decoration: none;
+  color: #ffffff;
 }
-
 
 .navigation-item-link:hover {
-    border-bottom: 2px solid #75AADC;
+  border-bottom: 2px solid #75aadc;
+  cursor: pointer;
 }
 
+.navigation-item > .navigation-active-link {
+  border-bottom: 2px solid #75aadc;
+}
 
+/** for mobile */
 @media screen and (max-width: 768px) {
-   .navigation-menu {
-        flex-direction: column;
+  .navigation-menu {
+    flex-direction: column;
+  }
 
-   }
+  .navigation-items {
+    flex-direction: column;
+    margin-top: 10px;
+  }
 
-   .navigation-items {
-        flex-direction: column;
-        margin-top: 10px;
-        
-   }
-
-   .navigation-item {
-       margin: auto;
-       margin-top: 15px;
-   }
+  .navigation-item {
+    margin: auto;
+    margin-top: 15px;
+  }
 }
