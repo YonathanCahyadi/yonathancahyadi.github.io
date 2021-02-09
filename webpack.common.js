@@ -1,9 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
 
 module.exports = {
-    mode: "development",
     entry: path.resolve(__dirname, "src", "index.js"),
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -36,12 +35,22 @@ module.exports = {
                         limit: 10000
                     }
                 }
-            }
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                  {
+                    loader: 'file-loader',
+                  },
+                ],
+              }
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "src", "index.html")
+            template: path.resolve(__dirname, "src", "index.html"),
+            favicon: path.resolve(__dirname, "src", "assets", "favicon.png")
         })
     ]
 

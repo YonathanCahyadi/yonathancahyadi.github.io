@@ -1,6 +1,11 @@
 .welcome-msg {
-    border: 1px solid white;
     position: absolute;
     margin-top: 15%;
     opacity: 0;
 }
+
+
+.portofolio-img {
+    margin-left: 35%;
+}
+

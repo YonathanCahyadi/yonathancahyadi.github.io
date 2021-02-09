@@ -1,24 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import "./style.css";
+import "./button-style.css";
 
-export default function Button(props){
-
-    return(
-            <button className={"button " + (props.primary ? "primary" : "secondary")} onClick={props.onClick}>
-                {props.children}
-            </button>
-    )
+export default function Button(props) {
+  return (
+    <button
+      className={"button " + (props.primary ? "primary" : "secondary")}
+      onClick={props.onClick}
+    >
+      {props.children}
+    </button>
+  );
 }
 
 Button.propTypes = {
-    primary: PropTypes.bool,
-    onClick: PropTypes.func
-}
+  primary: PropTypes.bool,
+  onClick: PropTypes.func
+};
 
 Button.defaultProps = {
-    primary: false,
-    onClick: null
-}
-
+  primary: false,
+  onClick: null
+};

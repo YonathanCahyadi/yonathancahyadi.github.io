@@ -1,10 +1,11 @@
 import React from "react";
 import { Fade } from "react-reveal";
 
-import "./style.css";
+import "./home-style.css";
+
+import portofolioImg from "../../assets/portfolio-website.svg";
 
 export default function HomePage(props) {
-
   return (
     <div className="home-page">
       <Fade cascade>
@@ -13,6 +14,11 @@ export default function HomePage(props) {
           <h1>Welcome</h1>
         </div>
       </Fade>
+      <img
+        className="portofolio-img"
+        src={portofolioImg}
+        alt="portfolio-website"
+      />
     </div>
   );
 }

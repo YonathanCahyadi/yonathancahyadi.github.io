@@ -1,7 +1,8 @@
-import React, { useEffect, createRef, useCallback, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link, animateScroll as Scroll } from "react-scroll";
-import { Fade } from "react-reveal";
-import "./style.css";
+
+
+import "./layout-style.css";
 
 function Layout(props) {
   return <div className="layout">{props.children}</div>;
@@ -30,12 +31,18 @@ function Navigation(props) {
   // update the offset for scroller spy
   useEffect(() => {
     setOffset(navRef.current.clientHeight);
+    console.log(navRef.current.clientHeight);
   }, [navRef]);
 
   return (
     <div className="navigation" ref={navRef}>
       <nav className="navigation-menu">
-        <img className="navigation-logo" src={props.logo} alt="logo" onClick={() => Scroll.scrollToTop()}/>
+        <img
+          className="navigation-logo"
+          src={props.logo}
+          alt="logo"
+          onClick={() => Scroll.scrollToTop()}
+        />
         <ul className="navigation-items">
           <li className="navigation-item">
             <Link
@@ -96,9 +103,7 @@ function Navigation(props) {
   );
 }
 
+
+
 export { Layout, Navigation, ContentDiv };
 
-export default {
-  Navigation,
-  ContentDiv,
-};

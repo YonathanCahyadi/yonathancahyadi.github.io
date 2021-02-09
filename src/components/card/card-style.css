@@ -1,0 +1,173 @@
+.card-container {
+    border-radius: 5px;
+    
+    width: 25vw;
+    height: 65vh;
+    
+    background-color: #F2F2F2;
+
+    color: #39374d;
+    padding: 5px 10px;
+
+    overflow: auto;
+}
+
+/** scroll bar */
+.card-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+/** scroll track */
+.card-container::-webkit-scrollbar-track {
+    background:#cccccc;
+    border-radius: 5px;
+}
+
+/** scroll thumb */
+.card-container::-webkit-scrollbar-thumb {
+    background: #39374d49;
+    border-radius: 5px;
+}
+
+/** scroll thumb on Hover */
+.card-container::-webkit-scrollbar-thumb:hover {
+    background:#39374d;
+}
+
+
+
+.common {
+    border: 2px solid #39374d49;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px 5px;
+}
+
+.card-date {
+    opacity: 0.5;
+    text-align: right;
+    margin: 2px 0px;
+}
+
+.card-name {
+   
+}
+
+.card-tech {
+}
+
+.card-tech-icon {
+
+    height: 50px;
+    width: 50px;
+}
+
+
+.card-description {
+  
+}
+
+.card-tech-items {
+    display: flex;
+    overflow: auto;
+}
+
+.card-tech-item {
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    list-style: none;
+    
+    margin: 5px 5px;
+    padding: 5px 5px;
+
+    text-align: center;
+}
+
+
+/** scroll bar */
+.card-tech-items::-webkit-scrollbar {
+    height: 5px;
+}
+
+/** scroll track */
+.card-tech-items::-webkit-scrollbar-track {
+    background:#cccccc;
+    border-radius: 5px;
+}
+
+/** scroll thumb */
+.card-tech-items::-webkit-scrollbar-thumb {
+    background: #39374d49;
+    border-radius: 5px;
+}
+
+/** scroll thumb on Hover */
+.card-tech-items::-webkit-scrollbar-thumb:hover {
+    background:#39374d;
+}
+
+
+.card-github {
+    overflow: auto;
+}
+
+/** scroll bar */
+.card-github::-webkit-scrollbar {
+    height: 5px;
+}
+
+/** scroll track */
+.card-github::-webkit-scrollbar-track {
+    background:#cccccc;
+    border-radius: 5px;
+}
+
+/** scroll thumb */
+.card-github::-webkit-scrollbar-thumb {
+    background: #39374d49;
+    border-radius: 5px;
+}
+
+/** scroll thumb on Hover */
+.card-github::-webkit-scrollbar-thumb:hover {
+    background:#39374d;
+}
+
+
+
+.card-count {
+    margin: 10px 5px;
+    text-align: center;
+    color: #cccccc;
+}
+
+
+.outer-cards-container {
+    display: flex;
+}
+
+
+.arrow-common {
+    width: 100px;
+    height: 100px;
+
+    filter: invert(84%) sepia(2%) saturate(28%) hue-rotate(324deg) brightness(94%) contrast(103%);
+    
+    margin: 35% 15px;
+    
+    cursor: pointer;
+}
+
+.arrow-common:hover {
+    filter: invert(85%) sepia(32%) saturate(4926%) hue-rotate(180deg) brightness(92%) contrast(87%);
+}
+
+.arrow-left {
+    transform: rotate(180deg);
+}
+
+.arrow-right {
+
+}

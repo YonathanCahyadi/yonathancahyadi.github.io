@@ -1,11 +1,13 @@
-import React, { lazy } from "react";
+import React from "react";
 
 import logo from "./assets/yonathan-cahyadi-logo.svg";
 
 import { Layout, Navigation, ContentDiv } from "./components/layout/Layout";
 
 import HomePage from "./pages/home/Home";
+import ProjectsPage from "./pages/projects/Projects";
 import ContactPage from "./pages/contact/Contact";
+import AboutPage from "./pages/about/About";
 
 class App extends React.Component {
   render() {
@@ -13,19 +15,15 @@ class App extends React.Component {
       <Layout>
         <Navigation logo={logo} />
         <ContentDiv primary id="home">
-            Home
           <HomePage />
         </ContentDiv>
         <ContentDiv id="about">
-            About
-          <HomePage />
+          <AboutPage />
         </ContentDiv>
         <ContentDiv primary id="projects">
-            Projects
-          <HomePage />
+          <ProjectsPage />
         </ContentDiv>
         <ContentDiv id="contact">
-            Contacts
           <ContactPage />
         </ContentDiv>
       </Layout>

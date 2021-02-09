@@ -1,0 +1,53 @@
+/** modify the placeholder font */
+::-webkit-input-placeholder{
+    font-family: 'Poppins', 'sans-serif';
+} 
+
+::-moz-placeholder {
+    font-family: 'Poppins', 'sans-serif';
+}
+
+::-moz-placeholder {
+    font-family: 'Poppins', 'sans-serif';
+}
+
+::-moz-placeholder {
+    font-family: 'Poppins', 'sans-serif';
+}
+
+/** other styling */
+.input {
+    border-radius: 3px;
+    border: 2px solid #39374d5b;
+    
+    padding: 10px 5px;
+    margin: 2px 10px;
+
+    width: 20vw;
+
+    font-family: 'Poppins', 'sans-serif';
+
+}
+
+.input:focus {
+    border: 2px solid #39374d;
+}
+
+.text-area {
+    border-radius: 3px;
+    border: 2px solid #39374d5b;
+    
+    padding: 10px 5px;
+    margin: 2px 10px;
+
+    width: 20vw;
+    height: 30vh;
+    
+    resize: none;
+}
+
+.invalid-input {
+    font-size: 14px;
+    color: red;
+    display: block;
+}
