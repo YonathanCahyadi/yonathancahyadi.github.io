@@ -8,7 +8,6 @@ export default function About(props){
     return(
         <div className="about-page">
             <Heading>About</Heading>
-
         </div>
     )
 }

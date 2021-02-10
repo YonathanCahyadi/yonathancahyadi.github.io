@@ -35,7 +35,6 @@
 }
 
 
-
 .common {
     border: 2px solid #39374d49;
     border-radius: 5px;
@@ -49,6 +48,11 @@
     margin: 2px 0px;
 }
 
+.card-name-heading {
+    padding: 0px 5px;
+    color: #39374da2;
+}
+
 .card-name {
    
 }
@@ -57,9 +61,9 @@
 }
 
 .card-tech-icon {
-
-    height: 50px;
-    width: 50px;
+    padding: 10px;
+    height: 100px;
+    width: 150px;
 }
 
 
@@ -135,7 +139,51 @@
     background:#39374d;
 }
 
+.card-sample-items {
+    display: flex;
+    overflow: auto;
+}
 
+.card-sample-item {
+    border: 1px solid black;
+    border-radius: 5px;
+
+    list-style: none;
+    
+    margin: 5px 5px;
+    padding: 5px 5px;
+
+    text-align: center;
+
+}
+
+.card-sample-img {
+    padding: 10px;
+    height: 100px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.card-sample-img:hover {
+    position: absolute;
+    display: block;
+   
+    padding: 0px;
+
+    z-index: 10;
+
+    border-radius: 0px;
+
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    
+    -ms-transform: scale(8); /* IE 9 */
+    -webkit-transform: scale(8); /* Safari and Chrome */
+
+}
 
 .card-count {
     margin: 10px 5px;

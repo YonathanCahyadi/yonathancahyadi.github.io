@@ -1,15 +1,18 @@
-import React from 'react';
+import React from "react";
+import { Fade } from "react-reveal";
 import Heading from "../../components/heading/Heading";
-import {Cards} from "../../components/card/Card";
-import ProjectsData from '../../data/projects-datas'
+import { Cards } from "../../components/card/Card";
+import ProjectsData from "../../data/projects-datas";
 
 import "./projects-style.css";
 
-export default function ProjectsPage(props){
-    return (
-        <div className="projects-page">
-            <Heading>Projects</Heading>
-            <Cards className="projects-card" datas={ProjectsData} />
-        </div>
-    )
+export default function ProjectsPage(props) {
+  return (
+    <div className="projects-page">
+      <Heading>Projects</Heading>
+      <Fade bottom>
+        <Cards className="projects-card" datas={ProjectsData} />
+      </Fade>
+    </div>
+  );
 }

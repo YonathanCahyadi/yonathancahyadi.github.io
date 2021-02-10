@@ -1,7 +1,17 @@
-const CSharp = require("../assets/c-sharp.png").default;
-const React = require("../assets/react.png").default;
-
-
+const CSharp = require("../assets/CSharp.svg");
+const React = require("../assets/react.svg");
+const ExpressJS = require("../assets/expressJS.svg");
+const NodeJS = require("../assets/nodeJS.svg");
+const Html = require("../assets/html5.svg");
+const Css = require("../assets/css.svg");
+const JavaScript = require("../assets/javascript.svg");
+const Docker = require("../assets/docker.svg");
+const Aws = require("../assets/aws.svg");
+const Spotify = require("../assets/spotify.svg");
+const Google = require("../assets/google.svg");
+const C = require("../assets/C.svg");
+const MongoDB = require("../assets/mongodb.svg");
+const Redis = require("../assets/redis.svg");
 
 module.exports = [
   {
@@ -14,6 +24,7 @@ module.exports = [
       }
     ],
     "description": "An assignment regarding data structure and algorithm. The data structure used for this project is a Binary Search Tree, while the algorithm used is Merge Sort. The Data Structure and Algorithm is implemented as part of DVD Manager Application. In the Application, the DVD is stored as Binary Search Tree and the searching function is using Merge Sort.",
+    "sample": "",
     "github": "https://github.com/YonathanCahyadi/dvd-manager"
   },
   {
@@ -25,31 +36,39 @@ module.exports = [
         "name": "React.js"
       },
       {
-        "img": "",
+        "img": ExpressJS,
         "name": "Express.js"
       },
       {
-        "img": "",
+        "img": NodeJS,
         "name": "Node"
       },
       {
-        "img": "",
+        "img": JavaScript,
         "name": "JavaScript"
       },
       {
-        "img": "",
+        "img": Html,
+        "name": "HTML"
+      },
+      {
+        "img": Css,
+        "name": "CSS"
+      },
+      {
+        "img": Spotify,
         "name": "Spotify API"
       },
       {
-        "img": "",
+        "img": Google,
         "name": "Google API"
       },
       {
-        "img": "",
+        "img": Aws,
         "name": "AWS"
       },
       {
-        "img": "",
+        "img": Redis,
         "name": "Redis Cache"
       }
     ],
@@ -61,7 +80,7 @@ module.exports = [
     "name": "Process Overseer",
     "techs": [
       {
-        "img": "",
+        "img": C,
         "name": "C"
       }
     ],
@@ -77,36 +96,48 @@ module.exports = [
         "name": "React.js"
       },
       {
-        "img": "",
+        "img": ExpressJS,
         "name": "Express.js"
       },
       {
-        "img": "",
+        "img": NodeJS,
         "name": "Node"
       },
       {
-        "img": "",
+        "img": JavaScript,
         "name": "JavaScript"
       },
       {
-        "img": "",
+        "img": Html,
+        "name": "HTML"
+      },
+      {
+        "img": Css,
+        "name": "CSS"
+      },
+      {
+        "img": Spotify,
         "name": "Spotify API"
       },
       {
-        "img": "",
+        "img": Google,
         "name": "Google API"
       },
       {
-        "img": "",
+        "img": Docker,
         "name": "Docker"
       },
       {
-        "img": "",
+        "img": Aws,
         "name": "AWS"
       }
     ],
     "description": "",
-    "github": "https://github.com/YonathanCahyadi/music-website"
+    "github": "https://github.com/YonathanCahyadi/music-website",
+    // "samples": [{
+    //   "img": require("../assets/music-website/HomePage.png").default,
+    //   "name": "Home Page"
+    // }]
   },
   {
     "date": "17 November 2020",
@@ -117,21 +148,29 @@ module.exports = [
         "name": "React.js"
       },
       {
-        "img": "",
+        "img": ExpressJS,
         "name": "Express.js"
       },
       {
-        "img": "",
+        "img": NodeJS,
         "name": "Node"
       },
       {
-        "img": "",
-        "name": "MongoDB"
+        "img": JavaScript,
+        "name": "JavaScript"
       },
       {
-        "img": "",
-        "name": "JavaScript"
-      }
+        "img": Html,
+        "name": "HTML"
+      },
+      {
+        "img": Css,
+        "name": "CSS"
+      },
+      {
+        "img": MongoDB,
+        "name": "MongoDB"
+      },
     ],
     "description": "",
     "github": "https://github.com/meowlearning/covid19-gis",
