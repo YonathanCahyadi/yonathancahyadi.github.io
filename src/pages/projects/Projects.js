@@ -1,5 +1,4 @@
 import React from "react";
-import { Fade } from "react-reveal";
 import Heading from "../../components/heading/Heading";
 import { Cards } from "../../components/card/Card";
 import ProjectsData from "../../data/projects-datas";
@@ -10,9 +9,7 @@ export default function ProjectsPage(props) {
   return (
     <div className="projects-page">
       <Heading>Projects</Heading>
-      <Fade bottom>
-        <Cards className="projects-card" datas={ProjectsData} />
-      </Fade>
+      <Cards className="projects-card" datas={ProjectsData} />
     </div>
   );
 }

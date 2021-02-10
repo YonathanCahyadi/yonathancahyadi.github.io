@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Fade } from "react-reveal";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import "./card-style.css";
 
 import Arrow from "../../assets/arrow.svg";
@@ -79,14 +79,14 @@ function Card(props) {
               <h5>Samples</h5>
             </div>
             <div className="card-sample common">
-                <ul className="card-sample-items">
-                    {props.samples.map((s, i) => (
-                        <li key={`${s.name} - ${i}`} className="card-sample-item">
-                            <img className="card-sample-img" src={s.img} alt={s.name} />
-                            <h5>{s.name}</h5>
-                        </li>
-                    ))}
-                </ul>
+              <ul className="card-sample-items">
+                {props.samples.map((s, i) => (
+                  <li key={`${s.name} - ${i}`} className="card-sample-item">
+                    <img className="card-sample-img" src={s.img} alt={s.name} />
+                    <h5>{s.name}</h5>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         ) : (
@@ -98,21 +98,18 @@ function Card(props) {
 }
 
 Card.propTypes = {
-    date: PropTypes.string,
-    name: PropTypes.string,
-    techs: PropTypes.array,
-    description: PropTypes.string,
-    github: PropTypes.string,
-    website: PropTypes.string,
-    samples: PropTypes.array
-}
-
-
+  date: PropTypes.string,
+  name: PropTypes.string,
+  techs: PropTypes.array,
+  description: PropTypes.string,
+  github: PropTypes.string,
+  website: PropTypes.string,
+  samples: PropTypes.array
+};
 
 function Cards(props) {
   const [currentCardCount, setCurrentCardCount] = useState(0);
   const [cards, setCards] = useState([]);
-  const [show, setShow] = useState(true);
 
   useEffect(() => {
     props.datas.map((data) => {
@@ -133,47 +130,44 @@ function Cards(props) {
 
   const clickLeftArrow = () => {
     if (currentCardCount > 0) {
-      setShow(false);
       setCurrentCardCount((prevCount) => prevCount - 1);
-      setShow(true);
     }
   };
 
   const clickRightArrow = () => {
     if (currentCardCount < props.datas.length - 1) {
-      setShow(false);
       setCurrentCardCount((prevCount) => prevCount + 1);
-      setShow(true);
     }
   };
 
   return (
-    <div className={props.className}>
-      <div className="outer-cards-container">
-        <img
-          className="arrow-left arrow-common"
-          src={Arrow}
-          onClick={() => clickLeftArrow()}
-        />
-        <div className="cards-container">
-          {cards[currentCardCount]}
-
-          <div className="card-count">
-            {`${currentCardCount + 1} / ${props.datas.length}`}
+    <Fade bottom>
+      <div className={props.className}>
+        <div className="outer-cards-container">
+          <img
+            className="arrow-left arrow-common"
+            src={Arrow}
+            onClick={() => clickLeftArrow()}
+          />
+          <div className="cards-container">
+            {cards[currentCardCount]}
+            <div className="card-count">
+              {`${currentCardCount + 1} / ${props.datas.length}`}
+            </div>
           </div>
+          <img
+            className="arrow-right arrow-common"
+            src={Arrow}
+            onClick={() => clickRightArrow()}
+          />
         </div>
-        <img
-          className="arrow-right arrow-common"
-          src={Arrow}
-          onClick={() => clickRightArrow()}
-        />
       </div>
-    </div>
+    </Fade>
   );
 }
 
 Cards.propTypes = {
-    datas: PropTypes.array
-}
+  datas: PropTypes.array
+};
 
 export { Card, Cards };
