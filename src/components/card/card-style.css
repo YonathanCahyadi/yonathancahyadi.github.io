@@ -1,221 +1,180 @@
+@import "../../style.css";
+
 .card-container {
-    border-radius: 5px;
-    
-    width: 25vw;
-    height: 65vh;
-    
-    background-color: #F2F2F2;
+  border-radius: 5px;
 
-    color: #39374d;
-    padding: 5px 10px;
+  width: 25vw;
+  height: 65vh;
 
-    overflow: auto;
+  background-color: var(--lighter-color);
+  color: var(--darker-color);
+
+  padding: 5px 10px;
+
+  overflow: auto;
 }
-
-/** scroll bar */
-.card-container::-webkit-scrollbar {
-    width: 5px;
-}
-
-/** scroll track */
-.card-container::-webkit-scrollbar-track {
-    background:#cccccc;
-    border-radius: 5px;
-}
-
-/** scroll thumb */
-.card-container::-webkit-scrollbar-thumb {
-    background: #39374d49;
-    border-radius: 5px;
-}
-
-/** scroll thumb on Hover */
-.card-container::-webkit-scrollbar-thumb:hover {
-    background:#39374d;
-}
-
 
 .common {
-    border: 2px solid #39374d49;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin: 10px 5px;
+  border: 2px solid var(--sub-darker-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px 5px;
 }
 
 .card-date {
-    opacity: 0.5;
-    text-align: right;
-    margin: 2px 0px;
+  opacity: 0.5;
+  text-align: right;
+  margin: 2px 0px;
 }
 
 .card-name-heading {
-    padding: 0px 5px;
-    color: #39374da2;
+  padding: 0px 5px;
+  color: #39374da2;
 }
 
 .card-name {
-   
 }
 
 .card-tech {
 }
 
 .card-tech-icon {
-    padding: 10px;
-    height: 100px;
-    width: 150px;
+  padding: 10px;
+  height: 100px;
+  width: 150px;
 }
 
-
 .card-description {
-  
 }
 
 .card-tech-items {
-    display: flex;
-    overflow: auto;
+  display: flex;
+  overflow: auto;
 }
 
 .card-tech-item {
+  border: 1px solid var(--sub-darker-color);
+  border-radius: var(--border-radius);
 
-    border: 1px solid black;
-    border-radius: 5px;
+  list-style: none;
 
-    list-style: none;
-    
-    margin: 5px 5px;
-    padding: 5px 5px;
+  margin: 5px 5px;
+  padding: 5px 5px;
 
-    text-align: center;
+  text-align: center;
 }
-
-
-/** scroll bar */
-.card-tech-items::-webkit-scrollbar {
-    height: 5px;
-}
-
-/** scroll track */
-.card-tech-items::-webkit-scrollbar-track {
-    background:#cccccc;
-    border-radius: 5px;
-}
-
-/** scroll thumb */
-.card-tech-items::-webkit-scrollbar-thumb {
-    background: #39374d49;
-    border-radius: 5px;
-}
-
-/** scroll thumb on Hover */
-.card-tech-items::-webkit-scrollbar-thumb:hover {
-    background:#39374d;
-}
-
 
 .card-github {
-    overflow: auto;
-}
-
-/** scroll bar */
-.card-github::-webkit-scrollbar {
-    height: 5px;
-}
-
-/** scroll track */
-.card-github::-webkit-scrollbar-track {
-    background:#cccccc;
-    border-radius: 5px;
-}
-
-/** scroll thumb */
-.card-github::-webkit-scrollbar-thumb {
-    background: #39374d49;
-    border-radius: 5px;
-}
-
-/** scroll thumb on Hover */
-.card-github::-webkit-scrollbar-thumb:hover {
-    background:#39374d;
+  overflow: auto;
 }
 
 .card-sample-items {
-    display: flex;
-    overflow: auto;
+  display: flex;
+  overflow: auto;
 }
 
 .card-sample-item {
-    border: 1px solid black;
-    border-radius: 5px;
+  border: 1px solid var(--sub-darker-color);
+  border-radius: var(--border-radius);
 
-    list-style: none;
-    
-    margin: 5px 5px;
-    padding: 5px 5px;
+  list-style: none;
 
-    text-align: center;
+  margin: 5px 5px;
+  padding: 5px 5px;
 
+  text-align: center;
 }
 
 .card-sample-img {
-    padding: 10px;
-    height: 100px;
-    width: 150px;
-    border-radius: 5px;
+  padding: 10px;
+  height: 100px;
+  width: 150px;
+  border-radius: var(--border-radius);
 }
 
 .card-sample-img:hover {
-    position: absolute;
-    display: block;
-   
-    padding: 0px;
+  position: absolute;
+  display: block;
 
-    z-index: 10;
+  padding: 0px;
 
-    border-radius: 0px;
+  z-index: 10;
 
-    -webkit-transition: all .3s ease-in;
-    -moz-transition: all .3s ease-in;
-    -ms-transition: all .3s ease-in;
-    -o-transition: all .3s ease-in;
-    transition: all .3s ease-in;
-    
-    -ms-transform: scale(8); /* IE 9 */
-    -webkit-transform: scale(8); /* Safari and Chrome */
+  border-radius: 0px;
 
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+
+  -ms-transform: scale(8); /* IE 9 */
+  -webkit-transform: scale(8); /* Safari and Chrome */
 }
 
 .card-count {
-    margin: 10px 5px;
-    text-align: center;
-    color: #cccccc;
+  margin: 10px 5px;
+  text-align: center;
+  color: #cccccc;
 }
-
 
 .outer-cards-container {
-    display: flex;
+  display: flex;
 }
 
-
 .arrow-common {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 
-    filter: invert(84%) sepia(2%) saturate(28%) hue-rotate(324deg) brightness(94%) contrast(103%);
-    
-    margin: 35% 15px;
-    
-    cursor: pointer;
+  filter: invert(84%) sepia(2%) saturate(28%) hue-rotate(324deg) brightness(94%)
+    contrast(103%);
+
+  margin: 35% 15px;
+
+  cursor: pointer;
 }
 
 .arrow-common:hover {
-    filter: invert(85%) sepia(32%) saturate(4926%) hue-rotate(180deg) brightness(92%) contrast(87%);
+  filter: invert(85%) sepia(32%) saturate(4926%) hue-rotate(180deg)
+    brightness(92%) contrast(87%);
 }
 
 .arrow-left {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .arrow-right {
+}
 
+/** customize all the scroll bar inside the card */
+
+/** scroll bar */
+.card-container::-webkit-scrollbar,
+.card-tech-items::-webkit-scrollbar,
+.card-github::-webkit-scrollbar {
+  width: 5px; /** for vertical bar */
+  height: 5px; /** for horizontal bar */
+}
+
+/** scroll track */
+.card-container::-webkit-scrollbar-track,
+.card-tech-items::-webkit-scrollbar-track,
+.card-github::-webkit-scrollbar-track {
+  background: var( --scroll-bar-lighter-color);
+  border-radius: var(--border-radius);
+}
+
+/** scroll thumb */
+.card-container::-webkit-scrollbar-thumb,
+.card-tech-items::-webkit-scrollbar-thumb,
+.card-github::-webkit-scrollbar-thumb {
+  background: var(--scroll-bar-sub-darker-color);
+  border-radius: var(--border-radius);
+}
+
+/** scroll thumb on Hover */
+.card-container::-webkit-scrollbar-thumb:hover,
+.card-tech-items::-webkit-scrollbar-thumb:hover,
+.card-github::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-bar-darker-color);
 }

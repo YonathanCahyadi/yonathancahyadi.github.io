@@ -1,31 +1,33 @@
+@import "../../style.css";
+
 .button {
     padding: 10px 20px;
-    border-radius: 3px;
+    border-radius: var(--border-radius);
     margin: 10px 20px;
 }
 
 .primary {
-    background-color: #39374d;
-    color: #FFFFFF;
-    border: 2px solid #39374d;;
+    background-color: var(--darker-color);
+    color: var(--lighter-color);
+    border: 2px solid var(--darker-color);;
 }
 
 .primary:hover {
     background-color: transparent;
-    color: #39374d;
-    border: 2px solid #39374d;
+    color: var(--darker-color);
+    border: 2px solid var(--darker-color);
 }
 
 .secondary {
     background-color: transparent;
-    color: #39374d;
-    border: 2px solid #39374d;
+    color: var(--darker-color);
+    border: 2px solid var(--darker-color);
 }
 
 .secondary:hover {
-    background-color: #39374d;
-    color: #FFFFFF;
-    border: 2px solid #39374d;
+    background-color: var(--darker-color);
+    color: var(--lighter-color);
+    border: 2px solid var(--darker-color);
 }
 
 .button:hover {

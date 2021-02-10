@@ -1,41 +1,43 @@
+@import "../../style.css";
+
 /** modify the placeholder font */
 ::-webkit-input-placeholder{
-    font-family: 'Poppins', 'sans-serif';
+    font-family: var(--font);
 } 
 
 ::-moz-placeholder {
-    font-family: 'Poppins', 'sans-serif';
+    font-family: var(--font);
 }
 
 ::-moz-placeholder {
-    font-family: 'Poppins', 'sans-serif';
+    font-family: var(--font);
 }
 
 ::-moz-placeholder {
-    font-family: 'Poppins', 'sans-serif';
+    font-family: var(--font);
 }
 
 /** other styling */
 .input {
-    border-radius: 3px;
-    border: 2px solid #39374d5b;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--sub-darker-color);
     
     padding: 10px 5px;
     margin: 2px 10px;
 
     width: 20vw;
 
-    font-family: 'Poppins', 'sans-serif';
+    font-family: var(--font);
 
 }
 
 .input:focus {
-    border: 2px solid #39374d;
+    border: 2px solid var(--darker-color);
 }
 
 .text-area {
-    border-radius: 3px;
-    border: 2px solid #39374d5b;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--sub-darker-color);
     
     padding: 10px 5px;
     margin: 2px 10px;

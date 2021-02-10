@@ -1,21 +1,23 @@
+@import "../../style.css";
+
 .content {
 
   height: 100vh;
 
   padding: 10vh 20vw;
 
-  font-family: "Poppins", "sans-serif";
+  font-family: var(--font);
 }
 
 .primary-bg {
-  background-color: #39374d;
-  color: #F2F2F2;
+  background-color: var(--darker-color);
+  color: var(--lighter-color);
 }
 
 .secondary-bg {
-  background-color: #39374d49;
+  background-color: var(--sub-darker-color);
 
-  color: #39374d;
+  color: var(--darker-color);
 }
 
 /** Navigation Bar */
@@ -33,10 +35,10 @@
   height: 8vh;
   width: 100vw;
 
-  background-color: #39374d;
-  color: #F2F2F2;
+  background-color: var(--darker-color);
+  color: var(--lighter-color);
 
-  font-family: "Poppins", "sans-serif";
+  font-family: var(--font);
   font-size: 16px;
   font-weight: 300;
 
@@ -62,16 +64,16 @@
 
 .navigation-item-link {
   text-decoration: none;
-  color: #F2F2F2;
+  color: var(--lighter-color);
 }
 
 .navigation-item-link:hover {
-  border-bottom: 2px solid #75aadc;
+  border-bottom: 2px solid var(--sub-color);
   cursor: pointer;
 }
 
 .navigation-item > .navigation-active-link {
-  border-bottom: 2px solid #75aadc;
+  border-bottom: 2px solid var(--sub-color);
 }
 
 
