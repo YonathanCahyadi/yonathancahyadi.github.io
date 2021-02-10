@@ -19,7 +19,3 @@ Button.propTypes = {
   onClick: PropTypes.func
 };
 
-Button.defaultProps = {
-  primary: false,
-  onClick: null
-};

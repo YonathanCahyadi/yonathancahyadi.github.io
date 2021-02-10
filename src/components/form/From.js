@@ -1,10 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Fade } from "react-reveal";
 
 import "./form-style.css";
 
 function Form(props) {
   return <form className={props.className}>{props.children}</form>;
+}
+
+Form.propTypes = {
+  className: PropTypes.string
 }
 
 function Input(props) {
@@ -20,6 +25,14 @@ function Input(props) {
   );
 }
 
+Input.propTypes = {
+  name: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func
+}
+
+
+
 function TextArea(props) {
   return (
     <textarea
@@ -32,6 +45,12 @@ function TextArea(props) {
   );
 }
 
+TextArea.propTypes = {
+  name: PropTypes.string,
+  value: PropTypes.value,
+  onChange: PropTypes.func
+}
+
 function Invalid(props) {
   return (
     <Fade bottom collapse when={props.visibility}>
@@ -40,5 +59,9 @@ function Invalid(props) {
   );
 }
 
+Invalid.propTypes = {
+  visibility: PropTypes.bool,
+  message: PropTypes.string
+}
 
 export { Form, Input, TextArea, Invalid };
