@@ -46,10 +46,13 @@
     height: 30vh;
     
     resize: none;
+
+    font-family: var(--font);
 }
 
 .invalid-input {
     font-size: 14px;
     color: red;
     display: block;
+    padding: 0px 10px;
 }

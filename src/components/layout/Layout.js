@@ -42,7 +42,8 @@ function Navigation(props) {
           src={props.logo}
           alt="logo"
           onClick={() => Scroll.scrollToTop()}
-        />
+          />
+          
         <ul className="navigation-items">
           <li className="navigation-item">
             <Link

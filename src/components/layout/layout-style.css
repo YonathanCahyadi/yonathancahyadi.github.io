@@ -1,6 +1,7 @@
 @import "../../style.css";
 
 .content {
+  border: 1px solid red;
 
   height: 100vh;
 
@@ -19,6 +20,8 @@
 
   color: var(--darker-color);
 }
+
+
 
 /** Navigation Bar */
 .navigation-spacer {
@@ -45,9 +48,10 @@
   z-index: 10; /** make it on the upper layer */
 }
 
+
 .navigation-logo {
     cursor: pointer;
-    width: fit-content;
+    width: 300px;
 }
 
 
