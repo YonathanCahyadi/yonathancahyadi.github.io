@@ -7,7 +7,7 @@ import Arrow from "../../assets/arrow.svg";
 
 function Card(props) {
   return (
-    <div className={props.className}>
+    <div className={props.className ?? "default-card"}>
       <div className="card-container">
         <div className="card-date">{props.date ?? "date unspecified"}</div>
 
@@ -98,6 +98,7 @@ function Card(props) {
 }
 
 Card.propTypes = {
+  className: PropTypes.string,
   date: PropTypes.string,
   name: PropTypes.string,
   techs: PropTypes.array,
@@ -142,26 +143,24 @@ function Cards(props) {
 
   return (
     <Fade bottom>
-      <div className={props.className}>
         <div className="outer-cards-container">
           <img
             className="arrow-left arrow-common"
             src={Arrow}
             onClick={() => clickLeftArrow()}
           />
-          <div className="cards-container">
-            {cards[currentCardCount]}
-            <div className="card-count">
-              {`${currentCardCount + 1} / ${props.datas.length}`}
+            <div className="cards-container">
+              {cards[currentCardCount]}
             </div>
-          </div>
+              <div className="card-count">
+                {`${currentCardCount + 1} / ${props.datas.length}`}
+              </div>
           <img
             className="arrow-right arrow-common"
             src={Arrow}
             onClick={() => clickRightArrow()}
           />
         </div>
-      </div>
     </Fade>
   );
 }

@@ -37,6 +37,7 @@ function Navigation(props) {
     console.log(navRef.current.clientHeight);
   }, [navRef]);
 
+  
   return (
     <div className="navigation" ref={navRef}>
       <nav className="navigation-menu">

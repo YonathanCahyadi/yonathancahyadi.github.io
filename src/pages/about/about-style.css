@@ -1,21 +1,16 @@
 @import "../../style.css";
 
 .about-page {
-    border: 1px solid teal;
-
     height: 100%;
     width: 100%;
 
     display: grid;
-
-
 
     grid-template-columns: repeat(10, 10%);
     grid-template-rows: repeat(10, 10%);
 }
 
 .heading {
-
     padding: 10px;
 
     grid-column: 1/2;
@@ -28,8 +23,6 @@
 }
 
 .about-text {
-
-
     grid-column: 7/10;
     grid-row: 5/7;
 
@@ -43,6 +36,7 @@
     padding: 10px;
 
     font-family: var(--font);
+    color: var(--darker-color);
 
     border-radius: var(--border-radius);
     border: none;

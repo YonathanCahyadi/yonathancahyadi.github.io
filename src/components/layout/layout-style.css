@@ -37,12 +37,11 @@
 .navigation-spacer {
   height: 8vh;
   display: flex;
-
-
-
 }
 
 .navigation-menu {
+  border: 1px solid springgreen;
+
   position: fixed;
   display: flex;
   justify-content: space-around;
@@ -101,6 +100,12 @@
 @media screen and (max-width: 768px) {
   .navigation-menu {
     flex-direction: column;
+    height: fit-content;
+  }
+
+  .navigation-logo {
+    margin-top: 20px;
+    width: 200px;
   }
 
   .navigation-items {

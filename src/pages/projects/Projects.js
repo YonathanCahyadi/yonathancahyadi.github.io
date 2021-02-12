@@ -8,9 +8,12 @@ import "./projects-style.css";
 export default function ProjectsPage(props) {
   return (
     <div className="projects-page">
-      <Heading>Projects</Heading>
-      <Cards className="projects-card" datas={ProjectsData} />
+      <Heading className="heading">Projects</Heading>
+      <div className="projects-card">
+        <Cards datas={ProjectsData} />
+      </div>
     </div>
   );
 }
+
 
