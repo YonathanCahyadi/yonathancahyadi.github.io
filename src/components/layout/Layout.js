@@ -11,10 +11,13 @@ function Layout(props) {
 function ContentDiv(props) {
   return (
     <div
-      className={"content " + (props.primary ? "primary-bg" : "secondary-bg")}
+      className={"content-container " + (props.primary ? "primary-bg" : "secondary-bg")}
       id={props.id ?? "content-default-id"}
     >
+      <div className="content">
+
       {props.children}
+      </div>
     </div>
   );
 }

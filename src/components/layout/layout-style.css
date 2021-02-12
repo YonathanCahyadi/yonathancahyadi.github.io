@@ -1,16 +1,26 @@
 @import "../../style.css";
 
-.content {
+.content-container {
   border: 1px solid red;
-
   height: 100vh;
 
-  padding: 10vh 20vw;
-
   font-family: var(--font);
+
+  display: grid;
+
+  grid-template-columns: 10vw auto 10vw;
+  grid-template-rows: 5vh auto 5vh;
+
+}
+
+.content {
+  grid-column: 2/3;
+  grid-row: 2/3;
+
 }
 
 .primary-bg {
+  
   background-color: var(--darker-color);
   color: var(--lighter-color);
 }
@@ -27,6 +37,9 @@
 .navigation-spacer {
   height: 8vh;
   display: flex;
+
+
+
 }
 
 .navigation-menu {
@@ -79,8 +92,6 @@
 .navigation-item > .navigation-active-link {
   border-bottom: 2px solid var(--sub-color);
 }
-
-
 
 
 

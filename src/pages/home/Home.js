@@ -1,5 +1,6 @@
 import React from "react";
 import { Fade } from "react-reveal";
+import Image from "../../components/image/Image";
 
 import "./home-style.css";
 
@@ -10,15 +11,16 @@ export default function HomePage(props) {
     <div className="home-page">
       <Fade cascade>
         <div className="welcome-msg">
-          <h1>Hi,</h1>
-          <h1>Welcome</h1>
+          <div>
+            <h1>Hi,</h1>
+            <h1>Welcome</h1>
+          </div>
         </div>
       </Fade>
-      <img
-        className="portofolio-img"
-        src={portofolioImg}
-        alt="portfolio-website"
-      />
+
+      <div className="portofolio-img">
+        <Image src={portofolioImg} alt="portfolio-website" />
+      </div>
     </div>
   );
 }
