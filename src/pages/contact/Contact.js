@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Button from "../../components/button/Button";
 import { Form, Input, Invalid, TextArea } from "../../components/form/From";
 import Heading from "../../components/heading/Heading";
-import { Slide } from "react-reveal";
 
 import "./contact-style.css";
 

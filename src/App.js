@@ -9,6 +9,7 @@ import ProjectsPage from "./pages/projects/Projects";
 import ContactPage from "./pages/contact/Contact";
 import AboutPage from "./pages/about/About";
 
+
 class App extends React.Component {
   render() {
     return (
@@ -18,7 +19,7 @@ class App extends React.Component {
           <HomePage />
         </ContentDiv>
         <ContentDiv id="about">
-          <AboutPage />
+         <AboutPage />
         </ContentDiv>
         <ContentDiv primary id="projects">
           <ProjectsPage />

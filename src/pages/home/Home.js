@@ -9,7 +9,7 @@ import portofolioImg from "../../assets/portfolio-website.svg";
 export default function HomePage(props) {
   return (
     <div className="home-page">
-      <Fade cascade>
+      <Fade left cascade>
         <div className="welcome-msg">
           <div>
             <h1>Hi,</h1>
