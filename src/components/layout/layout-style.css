@@ -40,8 +40,6 @@
 }
 
 .navigation-menu {
-  border: 1px solid springgreen;
-
   position: fixed;
   display: flex;
   justify-content: space-around;
