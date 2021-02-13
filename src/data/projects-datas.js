@@ -72,7 +72,7 @@ module.exports = [
         "name": "Redis Cache"
       }
     ],
-    "description": "",
+    "description": "A more advance website of Music Website Project. This website also using NaturalNode library to do some language processing, the result of the language processing is used to tag the music nuance (sad, neutral, happy). This project also dockerized, redis-cached, and deployed to AWS with load balancer feature.",
     "github": "https://github.com/YonathanCahyadi/music-sentiment-analyzer"
   },
   {
@@ -84,7 +84,7 @@ module.exports = [
         "name": "C"
       }
     ],
-    "description": "",
+    "description": "A project made using C programming languge. This project is focused on socket, I/O, multi-threading and synchronization. The project is consisting of 2 program, a controler (client) and a overseer (server). The controler can send command to the overseer and the overseer will execute the command.",
     "github": "https://github.com/YonathanCahyadi/process_overseer"
   },
   {
@@ -132,7 +132,7 @@ module.exports = [
         "name": "AWS"
       }
     ],
-    "description": "",
+    "description": "A project made using Spotify, lyrics.ovh and Google Translate API. This project get music recommendation from the Spotify API, then get the music lyric from the lyrics.ovh API. This website also provide a translation of the lyric using Google API. This project then dockerized and deployed to AWS.",
     "github": "https://github.com/YonathanCahyadi/music-website",
     // "samples": [{
     //   "img": require("../assets/music-website/HomePage.png").default,
@@ -172,7 +172,7 @@ module.exports = [
         "name": "MongoDB"
       },
     ],
-    "description": "",
+    "description": "A project regarding COVID-19. This project is consist of 4 people and we practice SCRUM management framework. In this project my role is to make the front-end and some of the back-end. I also need to make a good relation with the client as I need to discuss the design of the website with the client. In this project we had some problem as our project deadline is rushed, however we manage to finished the project and have our client satisfied. We managed to this because of our good project management.",
     "github": "https://github.com/meowlearning/covid19-gis",
     "website": "https://covid-19-data-visualisation.herokuapp.com/"
   }
