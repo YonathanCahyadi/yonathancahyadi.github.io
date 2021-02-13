@@ -28,7 +28,7 @@ function Card(props) {
                 {props.techs.map((t, i) => (
                   <li key={`${t.name}-${i}`} className="card-tech-item">
                     {t.img ? (
-                      <img className="card-tech-icon" src={t.img} />
+                      <img className="card-tech-icon" src={t.img} alt={t.name} />
                     ) : (
                       <div />
                     )}
@@ -155,6 +155,7 @@ function Cards(props) {
         <img
           className="arrow-left arrow-common"
           src={Arrow}
+          alt="left-arrow-img.svg"
           onClick={() => clickLeftArrow()}
         />
 
@@ -167,6 +168,7 @@ function Cards(props) {
         <img
           className="arrow-right arrow-common"
           src={Arrow}
+          alt="right-arrow-img.svg"
           onClick={() => clickRightArrow()}
         />
       </div>
