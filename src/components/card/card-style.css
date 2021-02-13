@@ -20,6 +20,8 @@
   height: 70vh;
 
   overflow: auto;
+
+  padding: 10px;
 }
 
 .common {
@@ -48,10 +50,6 @@
   width: 150px;
 }
 
-.card-description {
-  overflow: auto;
-
-}
 
 .card-tech-items {
   display: flex;
@@ -71,7 +69,16 @@
 }
 
 .card-github {
-  overflow: auto;
+
+}
+
+.card-github-link {
+  word-wrap: break-word;
+}
+
+
+.card-website-link {
+  word-wrap: break-word;
 }
 
 .card-sample-items {
@@ -120,25 +127,19 @@
 
 
 
+
 .outer-cards-container {
   display: grid;
 
   grid-template-columns: repeat(11, 10%);
   grid-template-rows: repeat(11, 10%);
-  
-  
 }
 
 .arrow-common {
-  width: 100px;
-  height: 100px;
-
   filter: invert(84%) sepia(2%) saturate(28%) hue-rotate(324deg) brightness(94%)
     contrast(103%);
 
-  margin: 35% 15px;
-
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 .arrow-common:hover {
@@ -146,27 +147,27 @@
     brightness(92%) contrast(87%);
 }
 
+
+
 .arrow-left {
-  transform: rotate(180deg);
-
-  grid-column: 1/3;
+  grid-column: -11/-12;
   grid-row: 5/7;
-
+  transform: rotate(180deg) scale(0.5);
 }
 
 .arrow-right {
-  grid-column: 10/12;
+  grid-column: 11/12;
   grid-row: 5/7;
+  transform: scale(0.5);
 }
 
 .cards-container {
-  grid-column: 3/10;
+  grid-column: 2/11;
   grid-row: 1/11;
 }
 
 .card-count {
-
-  grid-column: 6/7;
+  grid-column: 5/8;
   grid-row: 11/12;
 
   text-align: center;
@@ -208,4 +209,22 @@
 .card-github::-webkit-scrollbar-thumb:hover,
 .card-description::-webkit-scrollbar-thumb:hover {
   background: var(--scroll-bar-darker-color);
+}
+
+
+@media screen and (max-width: 768px) {
+  .arrow-left {
+    grid-column: 4/5;
+    grid-row: 11/12;
+  }
+  
+  .arrow-right {
+    grid-column: 8/9;
+    grid-row: 11/12;
+  }
+  
+  .cards-container {
+    grid-column: 1/12;
+    grid-row: 1/11;
+  }
 }

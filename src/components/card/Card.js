@@ -53,7 +53,11 @@ function Card(props) {
           <h5>Github Source Code</h5>
         </div>
         <div className="card-github common">
-          <a href={props.github} alt={props.github}>
+          <a
+            className="card-github-link"
+            href={props.github}
+            alt={props.github}
+          >
             {props.github}
           </a>
         </div>
@@ -64,7 +68,11 @@ function Card(props) {
               <h5>Website</h5>
             </div>
             <div className="card-website common">
-              <a href={props.website} alt={props.website}>
+              <a
+                className="card-website-link"
+                href={props.website}
+                alt={props.website}
+              >
                 {props.website}
               </a>
             </div>
@@ -143,24 +151,25 @@ function Cards(props) {
 
   return (
     <Fade bottom>
-        <div className="outer-cards-container">
-          <img
-            className="arrow-left arrow-common"
-            src={Arrow}
-            onClick={() => clickLeftArrow()}
-          />
-            <div className="cards-container">
-              {cards[currentCardCount]}
-            </div>
-              <div className="card-count">
-                {`${currentCardCount + 1} / ${props.datas.length}`}
-              </div>
-          <img
-            className="arrow-right arrow-common"
-            src={Arrow}
-            onClick={() => clickRightArrow()}
-          />
+      <div className="outer-cards-container">
+        <img
+          className="arrow-left arrow-common"
+          src={Arrow}
+          onClick={() => clickLeftArrow()}
+        />
+
+        <div className="cards-container">{cards[currentCardCount]}</div>
+
+        <div className="card-count">
+          {`${currentCardCount + 1} / ${props.datas.length}`}
         </div>
+
+        <img
+          className="arrow-right arrow-common"
+          src={Arrow}
+          onClick={() => clickRightArrow()}
+        />
+      </div>
     </Fade>
   );
 }
