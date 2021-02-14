@@ -34,7 +34,6 @@ function Navigation(props) {
   // update the offset for scroller spy
   useEffect(() => {
     setOffset(navRef.current.clientHeight);
-    console.log(navRef.current.clientHeight);
   }, [navRef]);
 
   
