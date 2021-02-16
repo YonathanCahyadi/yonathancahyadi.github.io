@@ -47,6 +47,8 @@
 
 .download-resume:hover {
     cursor: pointer;
+    box-shadow: 5px 5px var(--darker-color);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 

@@ -15,6 +15,7 @@ export default function About(props) {
     window.open(Resume);
   };
 
+  
   return (
     <div className="about-page">
       <Heading className="heading">About</Heading>
