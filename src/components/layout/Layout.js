@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import { Link, animateScroll as Scroll } from "react-scroll";
 
 
@@ -32,11 +32,14 @@ function Navigation(props) {
   const navRef = useRef(null);
 
   // update the offset for scroller spy
-  useEffect(() => {
-    setOffset(navRef.current.clientHeight);
-  }, [navRef]);
+  // useEffect(() => {
+  //   setOffset(navRef.current.clientHeight);
+  // }, [navRef]);
 
-  
+  useLayoutEffect(() => {
+    setOffset(navRef.current.getBoundingClientRect().height)
+  }, [])
+
   return (
     <div className="navigation" ref={navRef}>
       <nav className="navigation-menu">
