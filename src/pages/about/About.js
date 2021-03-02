@@ -15,7 +15,6 @@ export default function About(props) {
     window.open(Resume);
   };
 
-  
   return (
     <div className="about-page">
       <Heading className="heading">About</Heading>
@@ -29,9 +28,8 @@ export default function About(props) {
           <p>
             My name is <b>Yonathan Cahyadi</b> and I have a{" "}
             <b>Bachelor of Information Technology (Computer Science)</b> degree.
-            I am interested in{" "}
-            <b>Web Development, System Programming and Network Security</b>. For
-            more Information you can download my Resume using the button below.
+            I am a <b>Full Stack Web Developer</b>. For more Information you can
+            download my Resume using the button below.
           </p>
         </div>
       </Fade>
