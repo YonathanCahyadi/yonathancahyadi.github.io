@@ -16,7 +16,7 @@ const Redis = require("../assets/redis.svg");
 module.exports = [
 {
     "date": "17 November 2020",
-    "name": "COVID-19 Data Analysis and Visualization",
+    "name": "COVID-19 Data Visualization and API",
     "techs": [
       {
         "img": React,
